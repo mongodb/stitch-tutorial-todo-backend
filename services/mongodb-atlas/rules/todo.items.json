@@ -1,0 +1,39 @@
+{
+    "id": "5cb766302232e9bc2e31d3be",
+    "database": "todo",
+    "collection": "items",
+    "filters": [
+        {
+            "name": "filter 1",
+            "query": {
+                "owner_id": "%%user.id"
+            },
+            "apply_when": {
+                "%%true": true
+            }
+        }
+    ],
+    "roles": [
+        {
+            "name": "owner",
+            "apply_when": {
+                "owner_id": "%%user.id"
+            },
+            "read": true,
+            "write": true,
+            "insert": true,
+            "delete": true,
+            "additional_fields": {}
+        }
+    ],
+    "schema": {
+        "properties": {
+            "_id": {
+                "bsonType": "objectId"
+            },
+            "owner_id": {
+                "bsonType": "string"
+            }
+        }
+    }
+}

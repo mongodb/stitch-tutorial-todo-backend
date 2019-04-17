@@ -1,0 +1,11 @@
+{
+    "app_id": "",
+    "config_version": 20180301,
+    "name": "",
+    "location": "US-VA",
+    "deployment_model": "GLOBAL",
+    "security": {},
+    "hosting": {
+        "enabled": false
+    }
+}
